@@ -17,7 +17,8 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@test/multi": ["packages/multi-lib/src/index.ts"]
+      "@test/multi": ["packages/multi-lib/src/index.ts"],
+      "@test/multi/secondary": ["packages/multi-lib/src/secondary/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

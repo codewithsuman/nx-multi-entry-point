@@ -1,4 +1,14 @@
 {
   "name": "@test/multi",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./secondary": {
+      "types": "./src/secondary/index.d.ts",
+      "default": "./src/secondary/index.js"
+    }
+  }
 }

@@ -14,6 +14,31 @@
         "assets": ["packages/multi-lib/*.md"]
       }
     },
+    "package": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/multi-lib",
+        "rollupConfig": "packages/multi-lib/rollup.config.js",
+        "project": "packages/multi-lib/package.json",
+        "main": "packages/multi-lib/src/index.ts",
+        "entryFile": "packages/multi-lib/src/index.ts",
+        "compiler": "babel",
+        "deleteOutputPath": true,
+        "external": ["typescript"],
+        "format": ["esm"],
+        "tsConfig": "packages/multi-lib/tsconfig.lib.json",
+        "updateBuildableProjectDepsInPackageJson": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies",
+        "assets": [
+          {
+            "glob": "*.md",
+            "input": "packages/multi-lib/",
+            "output": "/"
+          }
+        ]
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
